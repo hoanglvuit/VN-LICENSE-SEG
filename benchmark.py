@@ -1,7 +1,5 @@
 import time
 import argparse
-import psutil
-import os
 from ultralytics import YOLO
 
 parser = argparse.ArgumentParser()
@@ -24,11 +22,7 @@ end = time.perf_counter()
 latency = (end - start) / args.runs
 fps = 1.0 / latency
 
-process = psutil.Process(os.getpid())
-ram = process.memory_info().rss / 1024 / 1024
-
 print("==== Benchmark ====")
 print(f"Model:   {args.model}")
 print(f"Latency: {latency*1000:.2f} ms")
 print(f"FPS:     {fps:.2f}")
-print(f"RAM:     {ram:.1f} MB")
