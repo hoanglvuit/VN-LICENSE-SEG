@@ -1,0 +1,8 @@
+model_path,mAP50-95,mAP50,mAP75,latency_ms,FPS,VRAM_MB
+runs/segment/train/weights/best.pt,0.8664,0.9936,0.9757,14.18,70.54,71.89
+runs/segment/train/weights/simplify_false_fp16_false_int8_false.onnx,0.8638,0.9935,0.9732,10.76,92.90,47.72
+runs/segment/train/weights/simplify_true_fp16_false_int8_false.onnx,0.8638,0.9935,0.9732,11.12,89.97,47.72
+runs/segment/train/weights/simplify_true_fp16_true_int8_false.onnx,0.8688,0.9936,0.9739,10.86,92.10,42.30
+runs/segment/train/weights/simplify_false_fp16_false_int8_false.engine,0.8637,0.9935,0.9732,9.06,110.31,57.47
+runs/segment/train/weights/simplify_true_fp16_false_int8_false.engine,0.8637,0.9935,0.9732,8.97,111.46,57.47
+runs/segment/train/weights/simplify_true_fp16_true_int8_false.engine,0.8639,0.9935,0.9732,7.80,128.18,57.47

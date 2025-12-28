@@ -2,8 +2,8 @@ from ultralytics import YOLO
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--model", type=str, required=True)
-parser.add_argument("--data", type=str, required=True)
+parser.add_argument("--model", type=str, default="yolo11n-seg.pt")
+parser.add_argument("--data", type=str, default="data.yaml")
 parser.add_argument("--epochs", type=int, default=50)
 args = parser.parse_args()
 
