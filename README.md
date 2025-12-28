@@ -77,3 +77,22 @@ Performance comparison across different model formats and optimization settings:
 - **Memory Efficient**: ONNX with FP16 (42.30 MB VRAM)
 - **Recommended**: TensorRT with FP16 for production deployment
 
+## TensorRT Performance Notes
+
+TensorRT significantly outperforms PyTorch and ONNX when deployed on NVIDIA GPUs. The FP16 quantization provides substantial improvements in inference speed (from 70.54 FPS to 128.18 FPS) while maintaining accuracy metrics comparable to full precision models.
+
+### Quantization Status
+- **FP16**: ✅ Working - Recommended for production
+  - Improves latency by ~45% compared to PyTorch
+  - Maintains mAP50-95 within 0.0025 of original
+- **INT8**: ⚠️ In development - Currently encountering errors, will be fixed in future updates
+
+## Hardware
+
+This project is tested and benchmarked on:
+```
+NVIDIA GeForce RTX 3070
+├── GPU Memory: 8192 MiB
+└── Compute Capability: Full precision + FP16 support
+```
+
